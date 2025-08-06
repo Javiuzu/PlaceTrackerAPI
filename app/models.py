@@ -5,7 +5,7 @@ from app.database import Base
 
 class Users(Base):
     __tablename__ = "users"
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     email = Column(String, unique=True, index=True)
     username = Column(String, index=True)
     hashed_password = Column(String)  #hash in 512 with salt and pepper
@@ -13,7 +13,7 @@ class Users(Base):
 
 class Places(Base):
     __tablename__ = "places"
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     name = Column(String, index=True)
     description = Column(String)

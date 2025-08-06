@@ -37,3 +37,7 @@ def authenticate_user(db: Session, username: str, password: str):
     if user and pwd_context.verify(password, user.hashed_password):
         return user
     return None
+
+
+def get_user_by_email(db, email):
+    return db.query(models.Users).filter(models.Users.email == email).first()
