@@ -20,4 +20,4 @@ class Places(Base):
     country = Column(String, index=True)
     date = Column(Date)
     visited = Column(Boolean)
-    #TODO add images to databese
+    #TODO add images to database
