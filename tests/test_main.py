@@ -61,3 +61,4 @@ def test_user_signup_and_login(client):
     token_data = response.json()
     print("Login response:", token_data)
 
+#TODO add more tests, check multiple user creation, same user creation, same email creation, etc.
